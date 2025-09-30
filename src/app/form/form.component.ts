@@ -16,6 +16,8 @@ warzywa = false
 wiek = ""
 pokazParagraf = false
 
+
+
 pokazAnalize(){
 this.pokazParagraf = true
 }

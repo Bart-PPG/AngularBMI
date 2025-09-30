@@ -26,8 +26,10 @@
         <div class="col">
         <button (click)="pokazAnalize()">Analiza</button>
         </div>
-        <div class="col">
-        <p>wynik analizy:
+        <div class="col">            
+        <p [class.rozowa]="plec == 'K'"
+        [class.niebieska]="plec == 'M'"
+        >wynik analizy:
             @if(pokazParagraf == true){
             Jesteś
             @if (plec == "K") {kobietą}
