@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 bg-info">
+            <label class="form-label"> Waga[kg]
+                <input  class="form-control" type="number" [(ngModel)]="waga">
+            </label>
+            <label class="form-label">Wzrost[m]
+                <input  class="form-control" type="number" [(ngModel)]="wzrost" >
+            </label>
+        </div>    
+        <div class="col-3">
+            <button class="btn btn-success" (click)="obliczBmi()">Oblicz BMI</button>
+        </div> 
+        <div class="col-3 bg-success-subtle">
+            <img src="bmi_wzor.png" alt="BMI_wzor" width="200px">
+            <p>Twoja waga: {{waga}}</p>
+            <p>Twoj wzrost: {{wzrost}}</p>
+            <p>Twoje bmi: {{wynik}}</p>
+        </div> 
+    </div>
+
+
+</div>

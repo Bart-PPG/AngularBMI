@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h4>Płeć</h4>
+            <input type="radio" value="K" [(ngModel)]="plec">Kobieta<br>
+            <input type="radio" value="M" [(ngModel)]="plec">Mężczyzna<br>
+        </div>    
+        <div class="col">
+            <h4>Ulubione jedzenie</h4>
+           <input type="checkbox" value="bialko" [(ngModel)]="bialko"> bialko<br>
+            <input type="checkbox" value="warzywa" [(ngModel)]="warzywa"> warzywa<br>
+            <input type="checkbox" value="nabial"[(ngModel)]="nabial"> nabiał<br>
+        </div> 
+        <div class="col">
+            <h4>Wiek</h4>
+            <select [(ngModel)]="wiek">
+                <option value="18-25">18-25</option>
+                <option value="26-35">26-35</option>
+                <option value="36-45">36-45</option>
+                <option value="46-70">46-70</option>
+            </select>
+        </div> 
+    </div>
+
+    <div class="row">
+        <div class="col">
+        <button (click)="pokazAnalize()">Analiza</button>
+        </div>
+        <div class="col">
+        <p>wynik analizy:
+            @if(pokazParagraf == true){
+            Jesteś
+            @if (plec == "K") {kobietą}
+            @else {Mężczyzną} <br>
+            Twoje ulubione jedzenie:
+            @if (bialko == true) {bialko, }
+            @if (warzywa == true) {warzywa, }
+            @if (nabial == true) {nabial, }
+            <br>
+            Twoj przedzial wiekowy: 
+            {{wiek}} lat
+            }
+            @else {}
+        </p>
+        </div>
+    </div>
+
+
+</div>
